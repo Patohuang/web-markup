@@ -1,102 +1,175 @@
 /* General Styling */
-* {
+*{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
+body{
+    background-color: black;
+    color: white;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
+h2{
+    font-size: 2em;
+}
+
+h3{
     text-align: center;
+    font-size: 2em;
+    padding-bottom: 20px;
+    color: #ff6347;
 }
 
-header h1 {
-    font-size: 2.5rem;
+ul{
+    padding: 0; 
 }
 
-nav ul {
+ul li {
     list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+}
+
+nav ul{
     display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 1.5rem;
-    font-size: 1.2rem;
+    padding: 0 20px;
 }
 
-nav ul li:hover {
-    text-decoration: underline;
-    cursor: pointer;
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
-article {
-    padding: 2rem;
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+nav ul li a.active {
+    color: #ff4500;
+}
+
+section ul {
+    padding: 20px 0;
+}
+
+article{
+    margin-top: 50px;
+}
+
+article.body-section{
     text-align: center;
+    height: 70vh;
+    padding-top: 50vh;
 }
 
-article h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+article.body-section p{
+    font-size: 1.5em;
 }
 
-article p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: #666;
+figure {
+    width: 70vw;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+figure img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+figcaption {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+img{
+    width: 70vw;
+    padding: 20px 0;
 }
 
 button {
+    width: 20vw;
+    margin-top: 50px;
     background-color: #ff6347;
     color: white;
     border: none;
-    padding: 1rem 2rem;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #ff4500;
 }
 
-button a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin-top: 2rem;
-    border-radius: 10px;
+section.center {
+    text-align: center;
 }
 
 footer {
     background-color: #333;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    border-top: 5px solid #ff6347;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer ul li a:hover {
+    color: #ff6347;
+    text-decoration: underline;
 }
 
 footer p {
     font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.header-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+    background-color:rgba(0,0,0,0.3);
+ }
+
+.home-header-background{
+    background-image:url(/img/gym\ backgound.jpg) ;
+    width: 100%;
+    height: 100vh;
+    background-position: bottom  left;
+    background-size: cover;
+}
+
+.warm-up-background{
+    background-image:url(/img/warmupbackground.webp) ;
+    width: 100%;
+    height: 100vh;
+    background-position: top;
+    background-size: cover;
+}
+
+.body-section{
+    width: 70vw;
+    margin: auto;
+    padding: 100px 0;
 }
