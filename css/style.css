@@ -2,6 +2,7 @@
 *{
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -15,11 +16,10 @@ h2{
 
 h3{
     text-align: center;
-    font-size: 2em;
     padding-bottom: 20px;
     color: #ff6347;
 }
-
+/* Navbar styling */
 ul{
     padding: 0; 
 }
@@ -36,7 +36,7 @@ nav ul li {
     padding: 0 20px;
 }
 
-nav ul li a {
+a {
     color: white;
     text-decoration: none;
 }
@@ -49,6 +49,19 @@ nav ul li a.active {
     color: #ff4500;
 }
 
+.header-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+    background-color:rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+
+/* Articles and sections styling */
 section ul {
     padding: 20px 0;
 }
@@ -57,7 +70,7 @@ article{
     margin-top: 50px;
 }
 
-article.body-section{
+article.head-section{
     text-align: center;
     height: 70vh;
     padding-top: 50vh;
@@ -67,10 +80,20 @@ article.body-section p{
     font-size: 1.5em;
 }
 
+section.center {
+    text-align: center;
+}
+
+.card-subtitle{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+/* Figures and images styling */
 figure {
     width: 70vw;
     display: inline-block;
-    text-align: center;
     margin-top: 20px;
 }
 
@@ -78,19 +101,21 @@ figure img {
     width: 300px;
     height: 200px;
     object-fit: cover;
-    margin-right: 10px;
+    margin-right: 50px;
 }
 
 figcaption {
     font-size: 1.1rem;
     font-weight: bold;
+    text-align: center;
 }
 
-img{
+.header img{
     width: 70vw;
-    padding: 20px 0;
+    padding: 100px 0;
 }
 
+/* Buttons styling */
 button {
     width: 20vw;
     margin-top: 50px;
@@ -110,10 +135,7 @@ button:hover {
     background-color: #ff4500;
 }
 
-section.center {
-    text-align: center;
-}
-
+/* Footer styling */
 footer {
     background-color: #333;
     color: white;
@@ -143,15 +165,7 @@ footer p {
     margin-top: 10px;
     opacity: 0.8;
 }
-
-.header-info{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid gray;
-    background-color:rgba(0,0,0,0.3);
- }
-
+/* Backgound styling */
 .home-header-background{
     background-image:url(/img/gym\ backgound.jpg) ;
     width: 100%;
@@ -168,8 +182,104 @@ footer p {
     background-size: cover;
 }
 
+.main-exercise-background{
+    background-image:url(/img/main\ exercise.webp) ;
+    width: 100%;
+    height: 100vh;
+    background-position: top;
+    background-size: cover;
+}
+
+/* Body styling */
 .body-section{
-    width: 70vw;
     margin: auto;
     padding: 100px 0;
+    width: 70vw;
+}
+
+.body-section article.header{
+    padding: 50px 0;
+}
+
+.body-section article.text, .body-section article.header{
+    display: grid;
+    grid-template-columns: 30% 70%; 
+}
+
+/* Card styling */
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+}
+
+.card.reverse{
+    grid-template-columns: 1fr 2fr;
+}
+
+.card section {
+    padding: 20px;
+}
+
+.card img {
+    width: 300px;
+    padding: 0;
+}
+
+.card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+  
+.card.reverse section:nth-child(1) {
+    order: 2;
+}
+
+.card.reverse section:nth-child(2) {
+    order: 1;
+}
+
+#main-exercises .body-section{
+    display: flex;
+    padding: 0;
+    width: auto;
+}
+
+#main-exercises .body-section>section
+{
+    padding: 100px 0;
+}
+
+/* Styling for the aside section */
+aside {
+    background-color: #1c1c1c;
+    border-right: 5px solid #ff6347;
+    padding: 20px;
+    margin-right: 50px;
+    color: white;
+    width: 70%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Darker shadow to match overall tone */
+}
+
+aside ul{
+    position: sticky;
+    top: 0;
+}
+
+aside ul li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+aside ul li a:hover {
+    color: #ff6347;
+}
+
+aside ol {
+    color: #ccc;
+}
+
+aside ol li {
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: normal;
 }
