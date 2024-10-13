@@ -54,12 +54,11 @@ nav ul li a.active {
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid gray;
-    background-color:rgba(0,0,0,0.3);
-    overflow: hidden;
+    background-color:rgba(0,0,0,0.8);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
-
 
 /* Articles and sections styling */
 section ul {
@@ -70,10 +69,15 @@ article{
     margin-top: 50px;
 }
 
-article.head-section{
+article.head-section {
+    position: relative;
+    z-index: 1;
     text-align: center;
-    height: 70vh;
-    padding-top: 50vh;
+    padding-top: 30vh;
+}
+
+.head-section p{
+    padding-top: 30px;
 }
 
 article.body-section p{
@@ -87,16 +91,19 @@ section.center {
 .card-subtitle{
     font-size: 1.5em;
     font-weight: bold;
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
 /* Figures and images styling */
 figure {
     width: 70vw;
-    display: inline-block;
     margin-top: 20px;
 }
 
+figure section {
+    display: flex;
+    padding-bottom: 50px;
+}
 figure img {
     width: 300px;
     height: 200px;
@@ -110,9 +117,8 @@ figcaption {
     text-align: center;
 }
 
-.header img{
+.body-section img{
     width: 70vw;
-    padding: 100px 0;
 }
 
 /* Buttons styling */
@@ -166,43 +172,34 @@ footer p {
     opacity: 0.8;
 }
 /* Backgound styling */
-.home-header-background{
-    background-image: url("../img/gym-backgound.jpg") ;
-    width: 100%;
-    height: 100vh;
-    background-position: bottom  left;
-    background-size: cover;
+.background{
+    height: 81vh;
 }
 
-.warm-up-background{
-    background-image: url("../img/warmupbackground.webp") ;
-    width: 100%;
+#main-exercises .background{
     height: 100vh;
-    background-position: top;
-    background-size: cover;
 }
 
-.main-exercise-background{
-    background-image:url("../img/main-exercise-backgound.webp") ;
+.background img{
     width: 100%;
     height: 100vh;
-    background-position: top;
-    background-size: cover;
+    object-fit: cover;
+    object-position: center top;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0.5;
 }
 
 /* Body styling */
 .body-section{
     margin: auto;
-    padding: 100px 0;
     width: 70vw;
-}
-
-.body-section article.header{
-    padding: 50px 0;
 }
 
 .body-section article.text, .body-section article.header{
     display: grid;
+    padding: 200px 0;
     grid-template-columns: 30% 70%; 
 }
 
@@ -245,9 +242,8 @@ footer p {
     width: auto;
 }
 
-#main-exercises .body-section>section
-{
-    padding: 100px 0;
+#home > article {
+    padding: 200px;
 }
 
 /* Styling for the aside section */
