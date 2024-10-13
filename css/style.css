@@ -1,7 +1,6 @@
-/* Import Fonts */
+/* General Styling */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Root Variables */
 :root {
     --primary-color: #1B1F26; /* Primary color */
     --primary-color-light: #444E60;
@@ -14,16 +13,15 @@
     --accent-color: #D9936A;
     --accent-color-light: #ffab7b;
     --accent-color-dark: #865a41;
-
+    
     --neutral-light: #ECF0F1;
     --neutral-dark: #2C3E50;
     --neutral-gray: #95A5A6;
 }
 
-/* Base Styles */
 * {
     margin: 0;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'barlow';
     scroll-behavior: smooth;
 }
 
@@ -32,7 +30,6 @@ body {
     color: var(--secondary-color);
 }
 
-/* Typography */
 h2 {
     font-size: 48px;
 }
@@ -43,7 +40,6 @@ h3 {
     padding-bottom: 20px;
     color: var(--accent-color);
 }
-
 h4 {
     font-size: 32px;
 }
@@ -53,14 +49,35 @@ p, li {
     line-height: 2rem;
 }
 
-/* Navigation */
+@media only screen and (max-width: 768px) {
+    h2 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+    p, li {
+        font-size: 16px;
+    }
+}
+
+/* Navbar styling */
+ul {
+    padding: 0; 
+}
+
+ul li {
+    list-style: none;
+}
+
 nav ul {
     display: flex;
-    padding: 0;
 }
 
 nav ul li {
-    list-style: none;
     padding: 0 20px;
 }
 
@@ -78,7 +95,6 @@ nav ul li a.active {
     color: var(--accent-color);
 }
 
-/* Header */
 .header-info {
     display: flex;
     justify-content: space-around;
@@ -92,7 +108,7 @@ nav ul li a.active {
     align-items: center;
 }
 
-/* Main Content */
+/* Articles and sections styling */
 section ul {
     padding: 20px 0;
 }
@@ -118,7 +134,7 @@ article.head-section {
     width: 70vw;
 }
 
-/* Buttons */
+/* Buttons styling */
 .button {
     margin-top: 100px;
     background-color: var(--accent-color-light);
@@ -133,22 +149,18 @@ article.head-section {
     width: 70vw;
 }
 
-.button:hover {
+.button:hover{
     background-color: var(--accent-color-dark);
     color: var(--secondary-color-dark);
 }
 
-/* Footer */
+/* Footer styling */
 footer {
     background-color: var(--neutral-dark);
     color: var(--secondary-color);
     padding: 20px 0;
     text-align: center;
     border-top: 5px solid var(--accent-color-dark);
-}
-
-footer ul {
-    padding: 0;
 }
 
 footer ul li {
@@ -166,10 +178,9 @@ footer p {
     opacity: 0.8;
 }
 
-/* Background */
+/* Background styling */
 .background {
     height: 100vh;
-    position: relative;
 }
 
 .background > img {
@@ -183,12 +194,11 @@ footer p {
     opacity: 0.5;
 }
 
-/* Body Section */
+/* Body styling */
 .body-section {
     margin: auto;
     width: 70vw;
 }
-
 .card-subtitle {
     font-size: 30px;
     padding: 50px 0 0 40px;
@@ -196,182 +206,6 @@ footer p {
     font-weight: bold;
 }
 
-/* Aside Section */
-aside {
-    background-color: var(--primary-color-dark);
-    border-right: 5px solid var(--accent-color-dark);
-    padding: 20px;
-    margin-right: 50px;
-    color: var(--secondary-color);
-    flex: 0 0 250px;
-    max-width: 250px;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-}
-
-aside ul {
-    padding: 0;
-}
-
-aside li {
-    list-style: none;
-    font-size: 15px;
-}
-
-aside ul li a:hover {
-    color: var(--accent-color);
-    font-weight: bold;
-}
-
-.aside-toggle {
-    display: none; /* Initially hidden for large screens */
-    cursor: pointer;
-    font-size: 1.2em;
-    padding: 10px;
-    background-color: var(--primary-color-dark);
-    color: var(--secondary-color-light);
-    text-align: center;
-    border: 1px solid var(--secondary-color-light);
-    width: 100%;
-}
-
-.arrow {
-    margin-left: 10px;
-}
-
-.menu-content {
-    display: block; /* Visible on large screens */
-    margin: 20px 0;
-}
-
-.aside-menu {
-    display: none; /* Hide the checkbox */
-}
-
-#main-exercises .body-section {
-    display: flex;
-    padding: 0;
-    width: auto;
-}
-
-/* Forms */
-form {
-    background-color: var(--neutral-dark);
-    padding: 50px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 100px auto;
-}
-
-fieldset {
-    border: none;
-    padding: 0;
-}
-
-legend {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--accent-color);
-    margin: 50px 0;
-    text-align: center;
-}
-
-label {
-    display: block;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-/* Input Fields, Select, and Textarea */
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--accent-color);
-    outline: none;
-    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
-}
-
-/* Select Dropdown */
-select {
-    background-color: var(--primary-color);
-    color: var(--secondary-color-dark);
-    padding: 10px;
-    cursor: pointer;
-}
-
-select:hover {
-    background-color: var(--primary-color-light);
-}
-
-.salutation {
-    max-width: 100px;
-}
-
-/* Submit Button */
-input[type="submit"] {
-    font-size: 15px;
-    font-weight: bold;
-    background-color: var(--accent-color-light);
-    color: var(--primary-color);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    margin: 50px auto 0 auto;
-    width: 250px;
-}
-
-input[type="submit"]:hover {
-    background-color: var(--accent-color-dark);
-    color: var(--secondary-color-dark);
-}
-
-/* Miscellaneous Hidden Elements */
-.side-menu,
-.hamb,
-.hamb-line,
-.aside-menu,
-.aside-toggle,
-.arrow-line {
-    display: none;
-}
-
-/* Responsive Styles */
-
-/* Responsive Typography */
-@media only screen and (max-width: 768px) {
-    h2 {
-        font-size: 36px;
-    }
-    h3 {
-        font-size: 32px;
-    }
-    h4 {
-        font-size: 24px;
-    }
-    p, li {
-        font-size: 16px;
-    }
-}
-
-/* Responsive Layout for Larger Screens */
 @media only screen and (min-width: 769px) {
     .body-section article.text,
     .body-section article.header {
@@ -380,7 +214,6 @@ input[type="submit"]:hover {
         align-items: baseline;
         grid-template-columns: 30% 70%;
     }
-
     #nutrition .body-section article.text,
     #nutrition .body-section article.header {
         grid-column-gap: 100px;
@@ -398,35 +231,34 @@ input[type="submit"]:hover {
         margin: 0 0 100px 0;
     }
 
-    /* Figures and Images */
+    /* Figures and images styling */
     figure {
         width: 70vw;
         margin-top: 20px;
     }
-
+    
     figure section {
         display: flex;
         padding-bottom: 50px;
     }
-
+    
     figure img {
         width: 300px;
         height: 200px;
         object-fit: cover;
         margin-right: 50px;
     }
-
+    
     figcaption {
         font-size: 20px;
         font-weight: bold;
         text-align: center;
     }
-
     #home > article {
         padding: 200px;
     }
 
-    /* Card Layout */
+    /* Card styling */
     .card {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -459,7 +291,8 @@ input[type="submit"]:hover {
         order: 1;
     }
 
-    /* Aside Section */
+    /* Styling for the aside section */
+
     aside {
         background-color: var(--primary-color-dark);
         border-right: 5px solid var(--accent-color-dark);
@@ -472,21 +305,17 @@ input[type="submit"]:hover {
         position: sticky;
         top: 0;
     }
-
-    aside ul {
-        padding: 0;
-    }
-
-    aside li {
-        list-style: none;
-        font-size: 15px;
-    }
-
+    
     aside ul li a:hover {
         color: var(--accent-color);
         font-weight: bold;
     }
-
+    
+    
+    aside li {
+        font-size: 15px;
+    }
+    
     .aside-toggle {
         display: none; /* Initially hidden for large screens */
         cursor: pointer;
@@ -498,43 +327,26 @@ input[type="submit"]:hover {
         border: 1px solid var(--secondary-color-light);
         width: 100%;
     }
-
+    
     .arrow {
         margin-left: 10px;
     }
-
+    
     .menu-content {
         display: block; /* Visible on large screens */
         margin: 20px 0;
     }
-
+    
     .aside-menu {
         display: none; /* Hide the checkbox */
     }
-
     #main-exercises .body-section {
         display: flex;
         padding: 0;
         width: auto;
     }
 
-    /* Contact Info Section */
-    .contact-info {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-
-    .contact-info section {
-        flex: 1;
-        margin-right: 50px;
-    }
-
-    .contact-info section:last-child {
-        margin-right: 0;
-    }
-
-    /* Contact Info Section */
+    /* Styling for contact info section */
     .contact-info {
         display: flex;
         justify-content: space-between;
@@ -551,13 +363,103 @@ input[type="submit"]:hover {
     }
 }
 
-/* Responsive Styles for Small Screens */
+/* Form styling */
+form {
+    background-color: var(--neutral-dark);
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 50px 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Styling for input fields, select, and textarea */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+}
+
+/* Styling for select dropdown */
+select {
+    background-color: var(--primary-color);
+    color: var(--secondary-color-dark);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.salutation {
+    max-width: 100px;
+}
+
+select:hover {
+    background-color: var(--primary-color-light);
+}
+
+/* Submit button */
+input[type="submit"] {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--accent-color-light);
+    color: var(--primary-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin: 50px auto 0 auto;
+    width: 250px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--accent-color-dark);
+    color: var(--secondary-color-dark);
+}
+
+.side-menu, .hamb, .hamb-line, .aside-menu, .aside-toggle, .arrow-line{
+    display: none;
+}
+
+/* Hamburger Menu (for small screens) */
 @media only screen and (max-width: 768px) {
-    /* General Adjustments */
     article {
         margin-bottom: 100px;
     }
-
     .nav {
         display: none; /* Hide nav links initially on small screens */
     }
@@ -598,7 +500,7 @@ input[type="submit"]:hover {
         top: 8px;
     }
 
-    /* Hamburger Menu Toggle */
+    /* Toggle Hamburger Menu */
     .side-menu {
         display: none;
     }
@@ -627,7 +529,6 @@ input[type="submit"]:hover {
         top: 0;
     }
 
-    /* Menu Content */
     .menu {
         flex-direction: column;
         gap: 15px;
@@ -641,50 +542,27 @@ input[type="submit"]:hover {
         width: 100%;
     }
 
-    .menu-content {
-        display: none;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .aside-menu:checked ~ .menu-content {
-        display: block;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 15px 0 100px 0;
-        height: auto;
-    }
-
-    .menu-content li a::after {
-        display: none;
-    }
-
-    /* Prevent Page Scroll When Menu is Open */
     body:has(.side-menu:checked, .aside-menu:checked) {
         overflow: hidden;
     }
 
-    /* Figures and Images */
     figure img {
         margin-bottom: 20px;
     }
 
-    figcaption {
+    figcaption{
         text-align: center;
     }
-
-    /* Section Adjustments */
-    section.center,
-    #home > article {
+    section.center,#home > article {
         width: 70vw;
         margin: 80px auto;
     }
 
-    section.center p {
+    section.center p{
         margin-bottom: 100px;
     }
 
-    /* Background */
+    /* Background styling */
     .background {
         height: 100vh;
     }
@@ -700,13 +578,10 @@ input[type="submit"]:hover {
         opacity: 0.5;
     }
 
-    /* Card Adjustments */
-    .card > section {
+    .card > section{
         margin-bottom: 100px;
     }
-
-    /* Aside Adjustments */
-    aside {
+    aside{
         width: 100%;
         margin: 0;
         max-height: 100vh;
@@ -729,7 +604,7 @@ input[type="submit"]:hover {
     }
 
     .arrow-line {
-        background: transparent;
+        background: var(--secondary-color-light);
         display: block;
         height: 2px;
         width: 24px;
@@ -737,6 +612,7 @@ input[type="submit"]:hover {
         transition: all 0.8s ease;
         margin-left: 20px;
         transform: rotate(90deg);
+        background: transparent;
     }
 
     .arrow-line::before,
@@ -759,12 +635,15 @@ input[type="submit"]:hover {
         transform: rotate(-45deg);
     }
 
-    /* Menu Content Visibility */
+    /* Menu content - initially hidden */
     .menu-content {
         display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
-    /* Show Menu Content When Aside Menu is Checked */
+    /* Show menu content when aside menu is checked */
     .aside-menu:checked ~ .menu-content {
         display: block;
         background-color: rgba(0, 0, 0, 0.8);
@@ -772,7 +651,7 @@ input[type="submit"]:hover {
         height: auto;
     }
 
-    /* Arrow Icon Transformation */
+    /* Transform the arrow icon to mimic the hamburger closing effect */
     .aside-menu:checked ~ .aside-toggle .arrow-line {
         background: transparent;
     }
@@ -787,7 +666,7 @@ input[type="submit"]:hover {
         top: 0;
     }
 
-    /* List Items Inside Menu */
+    /* List items style inside the menu */
     .menu-content li a {
         display: block;
         padding: 10px 0;
@@ -795,43 +674,41 @@ input[type="submit"]:hover {
         text-align: center;
         width: 100%;
     }
+    .menu-content li a::after {
+        display: none;
+    }
+    /* Prevent page scroll when menu is open */
 
-    /* Prevent Grid Layout for Main Exercises */
     #main-exercises .body-section {
         display: block; /* Break out of the grid layout */
         width: 100vw; /* Full width on mobile */
     }
-
-    .body-section > section {
+    .body-section > section{
         width: 70vw;
         margin: auto;
     }
 
-    /* Adjust Aside Toggle Style */
+    /* Adjust the aside-toggle style for better alignment */
     .aside-toggle {
+        display: flex;
         justify-content: space-around;
         background-color: var(--primary-color-dark);
         color: var(--secondary-color-light);
     }
 
-    /* Card Subtitle */
     .card-subtitle {
         font-size: 22px;
     }
 
-    /* Form Adjustments */
     form {
         padding: 20px;
         margin: 0 15px 100px 15px;
     }
-
     .salutation {
         max-width: 100%;
     }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    input[type="text"], input[type="email"], textarea {
         width: 90%;
     }
+
 }
