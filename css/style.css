@@ -59,13 +59,9 @@ p, li {
     h4 {
         font-size: 24px;
     }
-    p {
+    p, li {
         font-size: 16px;
     }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
-
 }
 
 /* Navbar styling */
@@ -130,38 +126,6 @@ article.head-section {
 
 .head-section p {
     padding-top: 30px;
-}
-
-section.center {
-    text-align: center;
-}
-
-section.center p {
-    margin: 0 0 100px 0;
-}
-
-/* Figures and images styling */
-figure {
-    width: 70vw;
-    margin-top: 20px;
-}
-
-figure section {
-    display: flex;
-    padding-bottom: 50px;
-}
-
-figure img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    margin-right: 50px;
-}
-
-figcaption {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
 }
 
 .body-section img {
@@ -233,55 +197,95 @@ footer p {
     width: 70vw;
 }
 
-.body-section > section {
-    padding-right: 50px;
+@media only screen and (min-width: 769px) {
+    .body-section article.text,
+    .body-section article.header {
+        display: grid;
+        padding: 200px 0;
+        align-items: baseline;
+        grid-template-columns: 30% 70%;
+    }
+    #nutrition .body-section article.text,
+    #nutrition .body-section article.header {
+        grid-column-gap: 100px;
+    }
+
+    .body-section > section {
+        padding-right: 50px;
+    }
+
+    section.center {
+        text-align: center;
+    }
+    
+    section.center p {
+        margin: 0 0 100px 0;
+    }
+    
+    /* Figures and images styling */
+    figure {
+        width: 70vw;
+        margin-top: 20px;
+    }
+    
+    figure section {
+        display: flex;
+        padding-bottom: 50px;
+    }
+    
+    figure img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin-right: 50px;
+    }
+    
+    figcaption {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    #home > article {
+        padding: 200px;
+    }
+
+    /* Card styling */
+    .card {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+        margin-top: 100px;
+    }
+
+    .card.reverse {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .card section {
+        padding: 40px;
+    }
+
+    .card img {
+        width: 300px;
+        padding: 0;
+    }
+
+    .card h4 {
+        margin-bottom: 10px;
+    }
+
+    .card.reverse section:nth-child(1) {
+        order: 2;
+    }
+
+    .card.reverse section:nth-child(2) {
+        order: 1;
+    }
 }
 
-.body-section article.text,
-.body-section article.header {
-    display: grid;
-    padding: 200px 0;
-    align-items: baseline;
-    grid-template-columns: 30% 70%;
-}
 
-#nutrition .body-section article.text,
-#nutrition .body-section article.header {
-    grid-column-gap: 100px;
-}
 
-/* Card styling */
-.card {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-    margin-top: 100px;
-}
 
-.card.reverse {
-    grid-template-columns: 1fr 2fr;
-}
-
-.card section {
-    padding: 40px;
-}
-
-.card img {
-    width: 300px;
-    padding: 0;
-}
-
-.card h4 {
-    margin-bottom: 10px;
-}
-
-.card.reverse section:nth-child(1) {
-    order: 2;
-}
-
-.card.reverse section:nth-child(2) {
-    order: 1;
-}
 
 #main-exercises .body-section {
     display: flex;
@@ -289,9 +293,7 @@ footer p {
     width: auto;
 }
 
-#home > article {
-    padding: 200px;
-}
+
 
 /* Styling for the aside section */
 aside {
@@ -420,3 +422,132 @@ input[type="submit"]:hover {
 .contact-info section:last-child {
     margin-right: 0;
 }
+
+.side-menu, .hamb, .hamb-line{
+    display: none;
+}
+
+/* Hamburger Menu (for small screens) */
+@media only screen and (max-width: 768px) {
+    article {
+        margin-bottom: 100px;
+    }
+    .nav {
+        display: none; /* Hide nav links initially on small screens */
+    }
+
+    .hamb {
+        display: block;
+        position: relative;
+        padding: 20px;
+        cursor: pointer;
+        margin: 0;
+        align-items: center;
+    }
+
+    .hamb-line {
+        background: var(--secondary-color-light);
+        display: block;
+        height: 2px;
+        width: 24px;
+        position: relative;
+        transition: all 0.5s ease;
+    }
+
+    .hamb-line::before,
+    .hamb-line::after {
+        content: '';
+        position: absolute;
+        background: var(--secondary-color-light);
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .hamb-line::before {
+        top: -8px;
+    }
+
+    .hamb-line::after {
+        top: 8px;
+    }
+
+    /* Toggle Hamburger Menu */
+    .side-menu {
+        display: none;
+    }
+
+    .side-menu:checked ~ .nav {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100vw;
+        background-color: var(--primary-color-dark);
+        padding: 20px;
+    }
+
+    .side-menu:checked ~ .hamb .hamb-line {
+        background: transparent;
+    }
+
+    .side-menu:checked ~ .hamb .hamb-line::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .side-menu:checked ~ .hamb .hamb-line::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu li a {
+        padding: 10px 0;
+        display: block;
+        color: var(--secondary-color-light);
+        width: 100%;
+    }
+
+    body:has(.side-menu:checked) {
+        overflow: hidden;
+    }
+
+    figure img {
+        margin-bottom: 20px;
+    }
+
+    figcaption{
+        text-align: center;
+    }
+    section.center,#home > article {
+        width: 70vw;
+        margin: 80px auto;
+    }
+
+    section.center p{
+        margin-bottom: 100px;
+    }
+
+    /* Background styling */
+    .background {
+        height: 100vh;
+    }
+
+    .background > img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center top;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        opacity: 0.5;
+    }
+}
+
