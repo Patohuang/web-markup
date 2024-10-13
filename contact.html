@@ -7,9 +7,9 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <title>Contact</title>
 </head>
-<body>
+<body id="contact">
     <header class="header-info">
-        <h1>FitStart</h1>
+        <a href="index.html"><img src="/img/Logo light.png" alt="Logo"></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,16 +21,49 @@
             </ul>
         </nav>   
     </header>
-    <form>
-        <fieldset>
-            <legend>Contact form:</legend>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="example@mail.com">
-            <label for="message">Message:</label>
-            <input type="text" id="message" name="message" value="Type something here...">
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
+    <section class="body-section">
+        <article>
+            <header>
+                <h3>Contact</h3>
+            </header>
+            <section class="center">
+                <p>If you have any questions about our workouts, need fitness advice, or just want to share your progress, don’t hesitate to reach out. 
+                    We’re here to support you every step of the way in your fitness journey!</p>
+            </section>
+        </article>
+        <form>
+            <fieldset>
+                <legend>Contact form:</legend>
+                <section class="contact-info">
+                    <section class="salutation">
+                        <label for="salutation">Salutation:</label>
+                        <select name="salutation" id="salutation">
+                            <option value="">--Please choose an option--</option>
+                            <option value="mr">Mr.</option>
+                            <option value="ms">Ms.</option>
+                        </select>
+                    </section>
+                    <section>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name">
+                    </section>
+                </section>
+                <section>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com">
+                </section>
+                <section>
+                    <label for="number">Number:</label>
+                    <input type="text" name="number" id="number" placeholder="0123456789">
+                </section>
+                <section>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Type something here..." rows="5" cols="5 0"></textarea>
+                </section>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </section>
     <footer>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>

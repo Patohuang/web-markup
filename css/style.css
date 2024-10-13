@@ -51,13 +51,15 @@ nav ul li a.active {
 
 .header-info{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     border-bottom: 1px solid gray;
     background-color:rgba(0,0,0,0.8);
     position: sticky;
     top: 0;
     z-index: 1000;
+    height: 50px;
+    align-items: center;
 }
 
 /* Articles and sections styling */
@@ -173,14 +175,10 @@ footer p {
 }
 /* Backgound styling */
 .background{
-    height: 81vh;
-}
-
-#main-exercises .background{
     height: 100vh;
 }
 
-.background img{
+.background > img{
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -287,3 +285,101 @@ aside ol li {
     margin-bottom: 8px;
     font-weight: normal;
 }
+
+/* Form styling */
+form {
+    background-color: #1c1c1c;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    margin: 50px 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Styling for input fields, select, and textarea */
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+    border-color: #ff6347;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+}
+
+/* Styling for select dropdown */
+select {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.salutation {
+    max-width: 100px;
+}
+
+select:hover {
+    background-color: #444;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin: 50px auto 0 auto;
+    width: 500px;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff4500;
+}
+/* Styling for contact info section */
+.contact-info {
+    display: flex; /* Use flexbox to arrange children horizontally */
+    justify-content: space-between; /* Space out the two fields */
+    margin-bottom: 20px; /* Space between this section and the next */
+}
+
+.contact-info section {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.contact-info section:last-child {
+    margin-right: 0; /* Remove right margin from the last item */
+}
+
