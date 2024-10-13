@@ -40,6 +40,7 @@ h3 {
     padding-bottom: 20px;
     color: var(--accent-color);
 }
+
 h4 {
     font-size: 32px;
 }
@@ -53,12 +54,15 @@ p, li {
     h2 {
         font-size: 36px;
     }
+
     h3 {
         font-size: 32px;
     }
+
     h4 {
         font-size: 24px;
     }
+
     p, li {
         font-size: 16px;
     }
@@ -199,6 +203,7 @@ footer p {
     margin: auto;
     width: 70vw;
 }
+
 .card-subtitle {
     font-size: 30px;
     padding: 50px 0 0 40px;
@@ -214,6 +219,7 @@ footer p {
         align-items: baseline;
         grid-template-columns: 30% 70%;
     }
+
     #nutrition .body-section article.text,
     #nutrition .body-section article.header {
         grid-column-gap: 100px;
@@ -254,6 +260,7 @@ footer p {
         font-weight: bold;
         text-align: center;
     }
+
     #home > article {
         padding: 200px;
     }
@@ -292,7 +299,6 @@ footer p {
     }
 
     /* Styling for the aside section */
-
     aside {
         background-color: var(--primary-color-dark);
         border-right: 5px solid var(--accent-color-dark);
@@ -310,7 +316,6 @@ footer p {
         color: var(--accent-color);
         font-weight: bold;
     }
-    
     
     aside li {
         font-size: 15px;
@@ -340,6 +345,7 @@ footer p {
     .aside-menu {
         display: none; /* Hide the checkbox */
     }
+
     #main-exercises .body-section {
         display: flex;
         padding: 0;
@@ -460,6 +466,7 @@ input[type="submit"]:hover {
     article {
         margin-bottom: 100px;
     }
+
     .nav {
         display: none; /* Hide nav links initially on small screens */
     }
@@ -553,6 +560,7 @@ input[type="submit"]:hover {
     figcaption{
         text-align: center;
     }
+
     section.center,#home > article {
         width: 70vw;
         margin: 80px auto;
@@ -581,6 +589,7 @@ input[type="submit"]:hover {
     .card > section{
         margin-bottom: 100px;
     }
+
     aside{
         width: 100%;
         margin: 0;
@@ -674,15 +683,17 @@ input[type="submit"]:hover {
         text-align: center;
         width: 100%;
     }
+
     .menu-content li a::after {
         display: none;
     }
-    /* Prevent page scroll when menu is open */
 
+    /* Prevent page scroll when menu is open */
     #main-exercises .body-section {
         display: block; /* Break out of the grid layout */
         width: 100vw; /* Full width on mobile */
     }
+
     .body-section > section{
         width: 70vw;
         margin: auto;
@@ -704,11 +715,12 @@ input[type="submit"]:hover {
         padding: 20px;
         margin: 0 15px 100px 15px;
     }
+
     .salutation {
         max-width: 100%;
     }
+
     input[type="text"], input[type="email"], textarea {
         width: 90%;
     }
-
 }
