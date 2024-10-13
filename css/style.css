@@ -197,10 +197,18 @@ footer p {
     width: 70vw;
 }
 
+.body-section > section {
+    padding-right: 50px;
+}
+
 .body-section article.text, .body-section article.header{
     display: grid;
     padding: 200px 0;
-    grid-template-columns: 30% 70%; 
+    grid-template-columns: 30% 70%;
+}
+
+#nutrition .body-section article.text, #nutrition .body-section article.header {
+    grid-column-gap: 100px;
 }
 
 /* Card styling */
@@ -253,7 +261,7 @@ aside {
     padding: 20px;
     margin-right: 50px;
     color: white;
-    width: 70%;
+    width: 560px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Darker shadow to match overall tone */
 }
 
