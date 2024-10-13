@@ -9,9 +9,12 @@
 </head>
 <body id="contact">
     <header class="header-info">
-        <a href="index.html"><img src="/img/Logo-light.png" alt="Logo"></a>
-        <nav>
-            <ul>
+        <a href="index.html"><img src="img/Logo-light.png" alt="Logo"></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="nav">
+            <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="warm-up.html">Warm-up</a></li>
                 <li><a href="main-exercises.html">Main exercises</a></li>
@@ -31,39 +34,39 @@
                     We’re here to support you every step of the way in your fitness journey!</p>
             </section>
         </article>
-        <form>
-            <fieldset>
-                <legend>Contact form</legend>
-                <section class="contact-info">
-                    <section class="salutation">
-                        <label for="salutation">Salutation: *</label>
-                        <select name="salutation" id="salutation" required>
-                            <option value="">--Please choose an option--</option>
-                            <option value="mr">Mr.</option>
-                            <option value="ms">Ms.</option>
-                        </select>
-                    </section>
-                    <section>
-                        <label for="name">Name: *</label>
-                        <input type="text" id="name" name="name" placeholder="Name" required>
-                    </section>
-                </section>
-                <section>
-                    <label for="email">Email: *</label>
-                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-                </section>
-                <section>
-                    <label for="number">Number: *</label>
-                    <input type="text" name="number" id="number" placeholder="0123456789" required>
-                </section>
-                <section>
-                    <label for="message">Message: *</label>
-                    <textarea id="message" name="message" placeholder="Type something here..." rows="5" cols="50" required></textarea>
-                </section>
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
     </section>
+    <form>
+        <fieldset>
+            <legend>Contact form</legend>
+            <section class="contact-info">
+                <section class="salutation">
+                    <label for="salutation">Salutation: *</label>
+                    <select name="salutation" id="salutation" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="mr">Mr.</option>
+                        <option value="ms">Ms.</option>
+                    </select>
+                </section>
+                <section>
+                    <label for="name">Name: *</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </section>
+            </section>
+            <section>
+                <label for="email">Email: *</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </section>
+            <section>
+                <label for="number">Number: *</label>
+                <input type="text" name="number" id="number" placeholder="0123456789" required>
+            </section>
+            <section>
+                <label for="message">Message: *</label>
+                <textarea id="message" name="message" placeholder="Type something here..." rows="5" cols="50" required></textarea>
+            </section>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
     <footer>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
