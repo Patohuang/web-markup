@@ -677,7 +677,7 @@ input[type="submit"]:hover {
     }
     /* Prevent page scroll when menu is open */
 
-    .body-section {
+    #main-exercises .body-section {
         display: block; /* Break out of the grid layout */
         width: 100vw; /* Full width on mobile */
     }
