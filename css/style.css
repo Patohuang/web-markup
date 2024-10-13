@@ -221,7 +221,7 @@ footer p {
     section.center p {
         margin: 0 0 100px 0;
     }
-    
+
     /* Figures and images styling */
     figure {
         width: 70vw;
@@ -283,17 +283,11 @@ footer p {
     }
 }
 
-
-
-
-
 #main-exercises .body-section {
     display: flex;
     padding: 0;
     width: auto;
 }
-
-
 
 /* Styling for the aside section */
 aside {
@@ -483,7 +477,7 @@ input[type="submit"]:hover {
         top: 70px;
         right: 0;
         width: 100vw;
-        background-color: var(--primary-color-dark);
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 20px;
     }
 
@@ -548,6 +542,10 @@ input[type="submit"]:hover {
         top: 0;
         z-index: 1;
         opacity: 0.5;
+    }
+
+    .card > section{
+        margin-bottom: 100px;
     }
 }
 
