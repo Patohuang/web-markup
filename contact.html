@@ -24,47 +24,45 @@
             </ul>
         </nav>   
     </header>
-    <article>
-        <header>
-            <h1>Contact</h1>
-        </header>
-        <section class="center">
+    <main>
+        <article>
+            <header>
+                <h1>Contact</h1>
+            </header>
             <p>If you have any questions about our workouts, need fitness advice, or just want to share your progress, don’t hesitate to reach out. 
                 We’re here to support you every step of the way in your fitness journey!</p>
-        </section>
-    </article>
-    <form>
-        <fieldset>
-            <legend>Contact form</legend>
-            <section class="contact-info">
-                <section class="salutation">
+        </article>
+        <form>
+            <fieldset>
+                <legend>Contact form</legend>
+                <fieldset class="salutation">
                     <label for="salutation">Salutation: *</label>
                     <select name="salutation" id="salutation" required>
                         <option value="">--Please choose an option--</option>
                         <option value="mr">Mr.</option>
                         <option value="ms">Ms.</option>
                     </select>
-                </section>
-                <section>
+                </fieldset>
+                <fieldset>
                     <label for="name">Name: *</label>
                     <input type="text" id="name" name="name" placeholder="Name" required>
-                </section>
-            </section>
-            <section>
-                <label for="email">Email: *</label>
-                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-            </section>
-            <section>
-                <label for="number">Number: *</label>
-                <input type="text" name="number" id="number" placeholder="0123456789" required>
-            </section>
-            <section>
-                <label for="message">Message: *</label>
-                <textarea id="message" name="message" placeholder="Type something here..." rows="5" cols="50" required></textarea>
-            </section>
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email: *</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </fieldset>
+                <fieldset>
+                    <label for="number">Number: *</label>
+                    <input type="text" name="number" id="number" placeholder="0123456789" required>
+                </fieldset>
+                <fieldset>
+                    <label for="message">Message: *</label>
+                    <textarea id="message" name="message" placeholder="Type something here..." rows="5" cols="50" required></textarea>
+                </fieldset>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </main>
     <footer>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
