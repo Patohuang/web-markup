@@ -1,0 +1,5 @@
+Student name: Patricio Huang
+Student number: 735968
+Student class: HAIT24FT1E
+GitHub Repository: https://github.com/Patohuang/web-markup
+GitHub Pages URL: https://patohuang.github.io/web-markup/
