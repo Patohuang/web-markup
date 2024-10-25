@@ -488,10 +488,12 @@ input[type="submit"]:hover {
 }
 
 .nutrition-table tbody tr:nth-child(even) {
-    background-color: var(--neutral-dark);
+    /* changed the color to match my website style*/
+    background-color: var(--neutral-dark); 
 }
 
 .nutrition-table tbody tr:nth-child(odd) {
+    /* changed the color to match my website style*/
     background-color: var(--primary-color-light);
 }
 
@@ -829,10 +831,12 @@ input[type="submit"]:hover {
     cursor: pointer;
     font-size: 0.9rem;
     border-radius: 4px;
+    display: inline-block;
 }
 
 /* Custom Scrollbar Styling for WebKit Browsers */
-::-webkit-scrollbar {
+/* Commentad because it casues warnings in the CSS validation */
+/* ::-webkit-scrollbar {
     width: 10px;
 }
 
@@ -844,15 +848,18 @@ input[type="submit"]:hover {
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent-color);
     border-radius: 5px;
-    border: 2px solid var(--primary-color-dark); /* Creates padding around the thumb */
+    border: 2px solid var(--primary-color-dark); /* Creates padding around the thumb
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--accent-color-light);
-}
+} */
 
 /* Custom Scrollbar Styling for Firefox */
+/* Commentad because it casues warnings in the CSS validation */
+/*
 * {
-    scrollbar-width: thin; /* Make scrollbar thinner */
+    scrollbar-width: thin; /* Make scrollbar thinner
     scrollbar-color: var(--accent-color) var(--primary-color-dark);
 }
+*/
