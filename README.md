@@ -19,14 +19,9 @@
 - **CSS3**: For styling and responsive design.
 - **Images**: High-quality visuals to enhance the user experience.
 
-## Getting Started
+## Live Demo
 
-To view the website:
-
-1. Clone the repository or download the files.
-2. Open `index.html` in a web browser.
-3. Explore the various sections and resources provided.
-
+You can view the live demo of the website at [Start Fit](https://patohuang.github.io/web-markup/).
 
 
 ## Contact
